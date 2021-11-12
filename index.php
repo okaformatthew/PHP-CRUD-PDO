@@ -21,7 +21,7 @@
             <h2><?php echo $row['title']; ?></h2>
             <p>Published date: <small><?php echo $row['create_date']; ?></small></p>
          <p><?php echo $row['content']; ?></p>
-         <a href="update.php?id=<?php echo $row['id']; ?>" class="btn btn-info">Update</a>
+         <a href="update.php?id=<?php echo  htmlspecialchars($row['id']); ?>" class="btn btn-info">Update</a>
          <a href="delete.php?id=<?php echo $row['id'];?>" class="btn btn-danger">Delete</a>
            </div>
         <?php endforeach; ?>
